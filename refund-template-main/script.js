@@ -6,7 +6,9 @@ const category = document.getElementById("category")
 
 
 const expenseList = document.querySelector("ul")
-const expenseQuantity = document.querySelector("aside header p span")
+const expensesQuantity = document.querySelector("aside header p span")
+const expensesTotal = document.querySelector("aside header h2")
+
 
 amount.oninput = () => {
 
@@ -116,6 +118,8 @@ function updateTotals(){
 
             total += Number(value)
         }
+
+        expensesTotal.textContent = total
     } catch (error) {
         console.log(error)
         alert("Não foi possível atualizar os totais.")
