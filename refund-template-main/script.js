@@ -57,6 +57,8 @@ function expenseAdd(newExpense){
 
 
         expenseItem.append(expenseIcon)
+
+        
         expenseList.append(expenseItem)
 
     } catch (error){
