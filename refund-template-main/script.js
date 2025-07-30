@@ -48,6 +48,11 @@ function expenseAdd(newExpense){
        
         const expenseItem = document.createElement ("li")
         expenseItem.classList.add("expense")
+
+        const expenseIcon = document.createElement("img")
+        expenseIcon.setAttribute("src", `img/${newExpense.category_id}.svg`)
+        expenseIcon.setAttribute("alt", newExpense.category_name)
+        
     } catch (error){
         alert("Não foi possível atualizar a lista de despesas.")
         console.log(error)
