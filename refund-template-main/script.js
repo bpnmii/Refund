@@ -6,6 +6,7 @@ const category = document.getElementById("category")
 
 
 const expenseList = document.querySelector("ul")
+const expenseQuantity = document.querySelector("aside header p span")
 
 amount.oninput = () => {
 
@@ -86,8 +87,21 @@ function expenseAdd(newExpense){
 
         expenseList.append(expenseItem)
 
+
+      updateTotals()
     } catch (error){
         alert("Não foi possível atualizar a lista de despesas.")
         console.log(error)
+    }
+}
+
+function updateTotals(){
+    try {
+        const items = expenseList.children
+       
+        expenseQuantity.textContent = `${items.length} ${items.length > 1 ? "despesas" : "despesas"}`
+    } catch (error) {
+        console.log(error)
+        alert("Não foi possível atualizar os totais.")
     }
 }
