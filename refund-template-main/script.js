@@ -99,7 +99,7 @@ function updateTotals(){
     try {
         const items = expenseList.children
        
-        expenseQuantity.textContent = `${items.length} ${items.length > 1 ? "despesas" : "despesas"}`
+        expenseQuantity.textContent = `${items.length} ${items.length > 1 ? "despesas" : "despesa"}`
     } catch (error) {
         console.log(error)
         alert("Não foi possível atualizar os totais.")
