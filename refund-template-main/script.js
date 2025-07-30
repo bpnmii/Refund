@@ -70,12 +70,12 @@ function expenseAdd(newExpense){
 
         const expenseAmount = document.createElement("span")
         expenseAmount.classList.add("expense-amount")
-        expenseAmount.innerHTML = `<span>R$</span>${newExpense.amount
+        expenseAmount.innerHTML = `<small>R$</small>${newExpense.amount
             .toUpperCase()
             .replace("R$", "")}`
 
 
-        expenseItem.append(expenseIcon, expenseInfo)
+        expenseItem.append(expenseIcon, expenseInfo, expenseAmount)
 
 
         expenseList.append(expenseItem)
