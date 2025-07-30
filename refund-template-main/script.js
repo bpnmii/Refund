@@ -64,7 +64,11 @@ function expenseAdd(newExpense){
         const expenseCategory = document.createElement("span")
         expenseCategory.textContent = newExpense.category_name
 
-        expenseItem.append(expenseIcon)
+
+        expenseInfo.append(expenseName, expenseCategory)
+
+
+        expenseItem.append(expenseIcon, expenseInfo)
 
 
         expenseList.append(expenseItem)
