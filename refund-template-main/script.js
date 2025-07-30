@@ -106,7 +106,15 @@ function updateTotals(){
         for(let item = 0; item < items.length; item++){
             const itemAmount = items[item].querySelector(".expense-amount")
 
-            console.log(itemAmount)
+            let value = itemAmount.textContent.replace(/[^\d]/g, "").replace(",",".")
+       
+            value = parseFloat(value)
+
+            if(isNaN(value)){
+                return alert("Não foi possível calcular o total. O total não parece ser um número.")
+            }
+
+            total += Number(value)
         }
     } catch (error) {
         console.log(error)
